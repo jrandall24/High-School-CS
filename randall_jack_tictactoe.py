@@ -2,7 +2,7 @@
 Name: Jack Randall
 Description: A program that lets the user play tictactoe against another user on the same device or a computer that chooses random positions
 Log: v1.0, initial version
-Bugs: Returns a draw when you input a move that is not available as the 9th move
+Bugs: Returns an error if inputting a spot that has already been played as the last move, then inputting the last available spot, returns a draw when playing another user and inputting a spot that has already been played as the last move
 Features: None
 Sources: W3Schools, GeeksforGeeks
 '''
@@ -200,8 +200,8 @@ User 1 goes first
                     can_move = user(computer, bot_move)
                     print_tictactoe()
                     check_win(computer)
-                    if choice in numbers:
-                        numbers.remove(choice)
+                    if bot_move in numbers:
+                        numbers.remove(bot_move)
                     else:
                         continue
                     move_loop += 1
@@ -226,8 +226,8 @@ User 1 goes first
                     can_move = user(computer, bot_move)
                     print_tictactoe()
                     check_win(computer)
-                    if choice in numbers:
-                        numbers.remove(choice)
+                    if bot_move in numbers:
+                        numbers.remove(bot_move)
                     else:
                         continue
                     move_loop += 1
