@@ -200,6 +200,10 @@ User 1 goes first
                     can_move = user(computer, bot_move)
                     print_tictactoe()
                     check_win(computer)
+                    if choice in numbers:
+                        numbers.remove(choice)
+                    else:
+                        continue
                     move_loop += 1
                 else:
                     print('That spot has already been played or your input is not on the board, please try again')
@@ -222,6 +226,10 @@ User 1 goes first
                     can_move = user(computer, bot_move)
                     print_tictactoe()
                     check_win(computer)
+                    if choice in numbers:
+                        numbers.remove(choice)
+                    else:
+                        continue
                     move_loop += 1
                 else:
                     print('That spot has already been played or your input is not on the board, please try again')
