@@ -5,7 +5,6 @@
 #Features: Give the user the ability to play one player or two player, clears terminal for two player
 #Sources: W3Schools
 
-
 #import a way to interact with the operating system, give the system a way to randomly pick something out of a list
 import os                   
 import random
@@ -69,7 +68,7 @@ while True:
         print('Incorrect input, please input C or P')
 #if the user chooses to play the computer
 if one_or_two == 'C':
-    #create a list of words, take a random choice from the list, turn the word into blank spaces, start a list of guesses, make a list of all the letters in the alphabet, make the user's lives equal 6
+    #takes in a file of a list of words, read the file, split into individual words, take a random choice from the file
     with open('CS2\\hangman_words.txt', 'r') as file:
         content = file.read()
         words_list = (content.split(' '))
