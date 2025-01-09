@@ -47,6 +47,15 @@ hangman = ['''
       ===''']
 #function to check whether someone has won by checking whether _ are no longer in the hidden word
 def check_win(one_or_two):
+    '''
+    When playing a computer, checks whether the player wins or loses. When playing another player, checks whether player 1 or player 2 wins
+
+    Args:
+        input: the user's choice of 1 player or 2 player
+    Returns:
+        str: says that the user wins when playing the computer
+        str: says that player 2 wins when playing another player
+    '''
     if one_or_two == 'C':
         if '_' not in blank_word:
             print('You win! The word was', ''.join(word))
